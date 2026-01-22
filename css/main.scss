@@ -1,16 +1,119 @@
-$primary-color: #6c5ce7;
+// ============================
+// Variables
+// ============================
+$bg-color: #ffffff;
+$text-color: #202124;
+$gray-text: #4d5156;
+$border-color: #dfe1e5;
+$link-color: #1a0dab;
+$btn-bg: #f8f9fa;
+$btn-border: #dadce0;
+$shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+// ============================
+// Reset básico
+// ============================
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+// ============================
+// Body
+// ============================
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+// ============================
+// Header
+// ============================
+header {
+  text-align: center;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+}
+
+// ============================
+// Search section
+// ============================
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  #searchInput {
+    width: 480px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 24px;
+    border: 1px solid $border-color;
+    font-size: 1rem;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow;
+    }
+  }
+
+  #searchBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    background-color: $btn-bg;
+    color: #3c4043;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      border: 1px solid $btn-border;
+    }
+  }
+}
+
+// ============================
+// Results
+// ============================
+.results {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// ============================
+// Cards
+// ============================
 .card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
+  margin-bottom: 2rem;
 
   h3 {
-    color: $primary-color;
+    font-size: 1.2rem;
+    color: $link-color;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    margin: 0.5rem 0;
+    max-width: 200px;
+    border-radius: 6px;
+  }
+
+  p {
+    color: $gray-text;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 }
