@@ -76,4 +76,37 @@ header h1 {
   color: #4d5156;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: #f8f9fa;
+  color: #3c4043;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pagination button:hover:not(:disabled) {
+  border-color: #dadce0;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.pagination #pageInfo {
+  font-size: 0.9rem;
+  color: #4d5156;
+  min-width: 120px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
